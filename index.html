@@ -14,6 +14,54 @@
 </head>
 <body>
 <div id="root"></div>
+<!-- Sincroniza el editor con Vercel: cuando "Publicar cambios" guarda en Firebase,
+     también se guarda content/siteV2.json en GitHub (y Vercel vuelve a publicar).
+     MANTENER este script si se recompila el sitio. Ver README. -->
+<script>
+(function () {
+  var nativeFetch = window.fetch;
+  var DOC_RE = /firestore\.googleapis\.com\/.*\/documents\/content\/siteV2(\?|$)/;
+  function toast(text, ok) {
+    try {
+      var el = document.createElement('div');
+      el.textContent = text;
+      el.setAttribute('role', 'status');
+      el.style.cssText = 'position:fixed;left:16px;bottom:16px;z-index:99999;max-width:min(360px,calc(100vw - 32px));' +
+        'padding:10px 14px;border-radius:10px;font:500 13px/1.4 "Space Grotesk",system-ui,sans-serif;color:#fff;' +
+        'box-shadow:0 8px 24px rgba(0,0,0,.4);background:' + (ok ? '#16a34a' : '#b91c1c');
+      document.body.appendChild(el);
+      setTimeout(function () { el.remove(); }, ok ? 4000 : 9000);
+    } catch (e) {}
+  }
+  function getAuth(headers) {
+    if (!headers) return null;
+    if (typeof headers.get === 'function') return headers.get('Authorization');
+    return headers.Authorization || headers.authorization || null;
+  }
+  window.fetch = function (input, init) {
+    var p = nativeFetch.apply(this, arguments);
+    try {
+      var url = typeof input === 'string' ? input : (input && input.url) || '';
+      var method = ((init && init.method) || 'GET').toUpperCase();
+      var auth = getAuth(init && init.headers);
+      if (method === 'PATCH' && auth && DOC_RE.test(url)) {
+        p.then(function (r) {
+          if (!r.ok) return;
+          nativeFetch('/api/publish', { method: 'POST', headers: { Authorization: auth } })
+            .then(function (res) { return res.json().catch(function () { return {}; }).then(function (j) { return [res.ok, j]; }); })
+            .then(function (x) {
+              var ok = x[0] && x[1].ok;
+              if (ok) toast(x[1].changed ? 'Guardado también en Vercel. La nueva versión estará lista en ~1 minuto.' : 'Vercel ya tenía esta versión.', true);
+              else toast('Se publicó en la página, pero no se pudo guardar en Vercel: ' + ((x[1] && x[1].error) || 'error'), false);
+            })
+            .catch(function () { toast('Se publicó en la página, pero no se pudo guardar en Vercel (sin conexión).', false); });
+        }).catch(function () {});
+      }
+    } catch (e) {}
+    return p;
+  };
+})();
+</script>
 <script type="module" src="assets/app-JGNQMROS.js"></script>
 </body>
 </html>
