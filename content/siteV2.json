@@ -1,0 +1,500 @@
+{
+  "v": 1,
+  "brand": {
+    "signature": "Creative Content · Real Brands",
+    "instagramHandle": "overproject_gdl",
+    "instagramUrl": "https://www.instagram.com/overproject_gdl/"
+  },
+  "hero": {
+    "eyebrow": "Creative Studio · Guadalajara",
+    "lead": "MKT Digital · Branding · Photography · Design. Contenido → Estrategia → Resultados.",
+    "ctaPrimary": "Cotiza tu proyecto",
+    "ctaSecondary": "Ver portafolio",
+    "note": "",
+    "videos": [
+      {
+        "id": "hv-over-project",
+        "src": "videos/hero-over-project.mp4",
+        "label": "Over Project — landing page"
+      },
+      {
+        "id": "hv-aesthetic-madness",
+        "src": "videos/hero-aesthetic-madness.mp4",
+        "label": "Aesthetic Madness — tienda en línea"
+      },
+      {
+        "id": "hv-aurawolf",
+        "src": "videos/hero-videojuego-informativa.mp4",
+        "label": "Aurawolf — sitio de videojuego"
+      },
+      {
+        "id": "hv-portal-trabajo",
+        "src": "videos/hero-portal-trabajo.mp4",
+        "label": "Portal de trabajo — herramienta interna"
+      }
+    ]
+  },
+  "marquee": [
+    "MKT Digital",
+    "Branding",
+    "Photography",
+    "Design",
+    "Creative Content · Real Brands",
+    "@overproject_gdl"
+  ],
+  "services": {
+    "kicker": "Servicios",
+    "title": "Todo lo que tu marca *necesita*",
+    "lead": "Elige lo que necesitas y cotízalo directo con nosotros.",
+    "groups": [
+      {
+        "id": "video",
+        "label": "Video"
+      },
+      {
+        "id": "foto",
+        "label": "Foto"
+      },
+      {
+        "id": "eventos",
+        "label": "Eventos"
+      },
+      {
+        "id": "web",
+        "label": "Web"
+      },
+      {
+        "id": "merch",
+        "label": "Prendas / Merch"
+      }
+    ],
+    "items": [
+      {
+        "id": "video-extra",
+        "name": "Video extra",
+        "group": "video",
+        "icon": "play",
+        "price": {
+          "kind": "fixed",
+          "amount": 600
+        },
+        "description": "Reel o video adicional fuera de tu plan mensual."
+      },
+      {
+        "id": "sesion-fotografia",
+        "name": "Sesión de fotografía",
+        "group": "foto",
+        "icon": "camera",
+        "price": {
+          "kind": "fixed",
+          "amount": 1000
+        },
+        "description": "Fotografía de producto, editorial o para redes."
+      },
+      {
+        "id": "video-comercial",
+        "name": "Video promocional tipo comercial",
+        "aside": "60-90 s",
+        "group": "video",
+        "icon": "clapper",
+        "price": {
+          "kind": "fixed",
+          "amount": 2000
+        },
+        "description": "Pieza con guion, dirección y edición cuidada, lista para campaña."
+      },
+      {
+        "id": "cobertura-evento",
+        "name": "Cobertura de evento",
+        "group": "eventos",
+        "icon": "calendar",
+        "price": {
+          "kind": "from",
+          "amount": 2500
+        },
+        "description": "Registro completo de tu evento, en foto y video."
+      },
+      {
+        "id": "testimonios",
+        "name": "Grabación de testimonios",
+        "group": "video",
+        "icon": "mic",
+        "price": {
+          "kind": "fixed",
+          "amount": 800
+        },
+        "description": "Entrevistas editadas, listas para usar como prueba social."
+      },
+      {
+        "id": "web-informativa",
+        "name": "Desarrollo de página web",
+        "aside": "Informativa",
+        "group": "web",
+        "icon": "monitor",
+        "price": {
+          "kind": "from",
+          "amount": 8000
+        },
+        "description": "Sitio web profesional, diseño personalizado, optimización y más.",
+        "note": "Dominio con costo cubierto por el cliente, membresías"
+      },
+      {
+        "id": "ecommerce",
+        "name": "Desarrollo de e-commerce",
+        "aside": "Tienda en línea",
+        "group": "web",
+        "icon": "cart",
+        "price": {
+          "kind": "from",
+          "amount": 12000
+        },
+        "description": "Catálogo de productos, métodos de pago, envíos, optimización y más.",
+        "note": "Dominio con costo cubierto por el cliente, membresías"
+      },
+      {
+        "id": "merch-personalizado",
+        "name": "Prendas / Merch personalizadas",
+        "group": "merch",
+        "icon": "shirt",
+        "price": {
+          "kind": "quote"
+        },
+        "description": "Playeras, sudaderas y artículos promocionales con tu diseño y tu marca. Gira el modelo para ver el detalle.",
+        "model3d": "models/hoodie.glb",
+        "model3dLabel": "Modelo 3D de una sudadera Over Project: arrástralo para girarlo"
+      }
+    ]
+  },
+  "stats": {
+    "plansLabel": "Planes Marketing",
+    "servicesLabel": "Servicios personalizados",
+    "pillarsLabel": "Pilares creativos",
+    "originalValue": 100,
+    "originalLabel": "Contenido original",
+    "pillars": [
+      "MKT Digital",
+      "Branding",
+      "Photography",
+      "Design"
+    ],
+    "features": [
+      {
+        "label": "Edición profesional",
+        "detail": "En cada entrega, sin excepción"
+      },
+      {
+        "label": "Subtítulos y música",
+        "detail": "Listo para publicar tal cual"
+      },
+      {
+        "label": "Adaptado a cada red",
+        "detail": "Formatos para reels, feed e historias"
+      },
+      {
+        "label": "Entrega en Google Drive",
+        "detail": "Organizado y fácil de descargar"
+      }
+    ]
+  },
+  "plans": {
+    "kicker": "Planes ",
+    "title": "Contenido constante, *sin complicarte*",
+    "lead": "Elige el plan que va con tu marca y pídelo en un clic.",
+    "items": [
+      {
+        "id": "basico",
+        "name": "Básico",
+        "price": {
+          "kind": "fixed",
+          "amount": 2000,
+          "per": "mes"
+        },
+        "features": [
+          "2 reels",
+          "10 fotografías editadas",
+          "1 sesión de grabación (hasta 1 hora)",
+          "Edición profesional",
+          "Subtítulos y música",
+          "Entrega en Google Drive",
+          "2 revisiones"
+        ]
+      },
+      {
+        "id": "business",
+        "name": "Business",
+        "price": {
+          "kind": "fixed",
+          "amount": 3500,
+          "per": "mes"
+        },
+        "features": [
+          "4 reels",
+          "15 fotografías editadas",
+          "1 sesión de grabación (hasta 3 horas)",
+          "Edición profesional",
+          "Subtítulos y música",
+          "Entrega en Google Drive",
+          "Adaptado para todas las redes",
+          "2 revisiones"
+        ]
+      },
+      {
+        "id": "premium",
+        "name": "Premium",
+        "price": {
+          "kind": "fixed",
+          "amount": 5500,
+          "per": "mes"
+        },
+        "badge": "Más elegido",
+        "features": [
+          "6 reels",
+          "25 fotografías editadas",
+          "2 sesiones de grabación (hasta 3 horas c/u)",
+          "Edición profesional",
+          "Subtítulos y música",
+          "Entrega en Google Drive",
+          "Adaptado para todas las redes",
+          "3 revisiones"
+        ]
+      }
+    ],
+    "addonsTitle": "Adicionales",
+    "addons": [
+      {
+        "id": "foto-extra",
+        "name": "Sesión de fotos extra",
+        "detail": "8 fotografías editadas",
+        "price": {
+          "kind": "fixed",
+          "amount": 1000
+        }
+      },
+      {
+        "id": "manejo-redes",
+        "name": "Manejo de redes",
+        "detail": "Publicación de contenido",
+        "price": {
+          "kind": "fixed",
+          "amount": 1500,
+          "per": "mes"
+        }
+      }
+    ]
+  },
+  "process": {
+    "kicker": "Cómo trabajamos",
+    "title": "Un proceso *claro*, de principio a fin",
+    "steps": [
+      {
+        "title": "Brief",
+        "text": "Entendemos tu marca, objetivos y a quién le hablas."
+      },
+      {
+        "title": "Grabación",
+        "text": "Sesión de foto y/o video, en tu espacio o el nuestro."
+      },
+      {
+        "title": "Edición y diseño",
+        "text": "Edición profesional, subtítulos, música y piezas gráficas."
+      },
+      {
+        "title": "Entrega",
+        "text": "Contenido listo, adaptado a cada red, entregado en Drive."
+      }
+    ]
+  },
+  "creations": {
+    "kicker": "Nuestras creaciones",
+    "title": "Páginas que *ya están en línea*",
+    "lead": "Sitios reales que diseñamos y programamos. Míralos en movimiento y entra a cada uno.",
+    "items": [
+      {
+        "id": "cr-over-project",
+        "name": "Over Project",
+        "tag": "Landing page",
+        "description": "Nuestro propio sitio: landing interactiva con catálogo de servicios, cotizador y editor propio.",
+        "video": "videos/hero-over-project.mp4",
+        "url": "https://over-project-over-project.vercel.app"
+      },
+      {
+        "id": "cr-aesthetic-madness",
+        "name": "Aesthetic Madness",
+        "tag": "E-commerce",
+        "description": "Tienda en línea de la marca de ropa: catálogo de productos y compra en línea.",
+        "video": "videos/hero-aesthetic-madness.mp4",
+        "url": "https://aestheticmadness.com/"
+      },
+      {
+        "id": "cr-aurawolf",
+        "name": "Aurawolf",
+        "tag": "Sitio informativo",
+        "description": "Sitio para un equipo de videojuego: presentación del equipo, perfiles y herramientas para sus jugadores.",
+        "video": "videos/hero-videojuego-informativa.mp4",
+        "url": "https://aurawolf-site.vercel.app/"
+      },
+      {
+        "id": "cr-portal",
+        "name": "Portal Empresarial",
+        "tag": "Herramienta interna",
+        "description": "Portal de trabajo para un equipo: informes, gastos y pendientes en un solo lugar.",
+        "video": "videos/hero-portal-trabajo.mp4",
+        "url": "https://script.google.com/macros/s/AKfycbwWpYU-j0NDEMTGUeLe827XB4RlG6clCm3q-O9378WCvU4vcFvLoDkCikA2i4QMRmMxhg/exec"
+      },
+      {
+        "id": "cr-yd04rp",
+        "name": "Proyecto web en curso | Tienda de suplementos",
+        "tag": "Sitio web",
+        "description": "Concepto de diseño web para una tienda de suplementos deportivos, enfocado en una estética moderna, navegación intuitiva y una presentación atractiva de productos. Una propuesta que combina identidad visual, funcionalidad y experiencia de usuario para impulsar las ventas en línea.",
+        "video": "videos/hero-strongest-supplements.mp4",
+        "url": "https://strongest-supplements-v2.vercel.app"
+      }
+    ]
+  },
+  "portfolio": {
+    "kicker": "Portafolio",
+    "title": "Trabajo real, *marcas reales*",
+    "categories": [
+      {
+        "id": "merch",
+        "label": "Merch y prendas"
+      },
+      {
+        "id": "branding",
+        "label": "Branding y diseño"
+      },
+      {
+        "id": "foto",
+        "label": "Fotografía"
+      },
+      {
+        "id": "video",
+        "label": "Video"
+      },
+      {
+        "id": "redes",
+        "label": "Redes sociales"
+      }
+    ],
+    "items": [
+      {
+        "id": "sudaderas",
+        "title": "Sudaderas personalizadas",
+        "category": "merch",
+        "image": "img/hoodie.webp",
+        "url": "https://www.instagram.com/reels/Dac1R8qxOp0/",
+        "description": "Conjuntos personalizados para Elite Team Pro Escuela de Entrenadores."
+      },
+      {
+        "id": "forzagen-merch",
+        "title": "Merch personalizada para Forzagen",
+        "category": "merch",
+        "image": "op:3mih94748lim",
+        "url": "https://www.instagram.com/p/DRALmbZDkF5/",
+        "description": "Trabajo realizado para Forzagen."
+      },
+      {
+        "id": "forzagen-tank",
+        "title": "Tank Top Olympic para Forzagen",
+        "category": "merch",
+        "image": "op:973zfa8i8lyf",
+        "url": "https://www.instagram.com/p/DMb4j_NsJ0A/",
+        "description": "Playera resaque olímpico para Forzagen."
+      },
+      {
+        "id": "sni-tanks",
+        "title": "Tank Tops Olympic para SNI Suplementos",
+        "category": "merch",
+        "image": "op:rizefvl38mg6",
+        "url": "https://www.instagram.com/sni_suplementos/",
+        "description": "Playeras personalizadas para SNI Suplementos."
+      },
+      {
+        "id": "tbe-oversized",
+        "title": "Oversized Dryfit para TBE GYM",
+        "category": "merch",
+        "image": "op:uvgsh6fz8muv",
+        "url": "https://www.instagram.com/p/DdsS_NnAq2T/",
+        "description": "Playeras oversized en tela Dryfit personalizadas para TBE GYM."
+      },
+      {
+        "id": "blackfit-tanks",
+        "title": "Tanks personalizadas para BLACKFIT MX",
+        "category": "merch",
+        "image": "op:mjgmsasdp42a",
+        "url": "https://www.instagram.com/p/DMdzpHIBLi6/?img_index=2",
+        "description": "Tanks de licra deportiva para BLACKFIT."
+      },
+      {
+        "id": "am-bolsa",
+        "title": "Bolsa esmerilada para Aesthetic Madness",
+        "category": "branding",
+        "image": "op:vyf50kxuibwd",
+        "url": "https://www.instagram.com/p/Dd16uLZlt-w/?img_index=1",
+        "description": "Bolsa para ropa color negro o transparente personalizada con tu logotipo."
+      },
+      {
+        "id": "atn-sesion",
+        "title": "Sesión fotográfica para ATN Suplementos",
+        "category": "foto",
+        "image": "op:ffxd953ticcm",
+        "url": "https://www.instagram.com/p/Ddw8WxGIAHi/?img_index=1",
+        "description": "Sesión fotográfica de atletas y producto para ATN Suplementos."
+      },
+      {
+        "id": "am-reel",
+        "title": "Reel para Aesthetic Madness",
+        "category": "video",
+        "url": "https://www.tiktok.com/@aesthetic_madnessfit/video/7685089237192002824",
+        "description": "Video para TikTok de Aesthetic Madness."
+      },
+      {
+        "id": "merch-over-project",
+        "title": "Merch Over Project",
+        "category": "merch",
+        "image": "img/merch.webp",
+        "description": "Playera, sudadera, bolsa tote, shaker y termo con el logotipo."
+      },
+      {
+        "id": "servicio-branding",
+        "title": "Branding",
+        "category": "branding",
+        "image": "img/servicio-branding.webp",
+        "description": "Identidad visual, naming, concepto y manual de marca."
+      },
+      {
+        "id": "servicio-design",
+        "title": "Design",
+        "category": "branding",
+        "image": "img/servicio-design.webp",
+        "description": "Diseño gráfico, contenido visual y piezas creativas."
+      },
+      {
+        "id": "instagram-overproject",
+        "title": "Instagram @overproject_gdl",
+        "category": "redes",
+        "url": "https://www.instagram.com/overproject_gdl/",
+        "description": "Más trabajos y contenido en nuestro perfil."
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Hablemos",
+    "title": "Cuéntanos tu *proyecto*",
+    "lead": "Escribe los detalles y te preparamos una propuesta a la medida.",
+    "phone": "",
+    "phoneLabel": "Llámanos o escríbenos por WhatsApp",
+    "email": ""
+  },
+  "about": {
+    "kicker": "Sobre nosotros",
+    "title": "Somos *Over Project*",
+    "lead": "Un estudio creativo de Guadalajara para marcas reales.",
+    "image": "",
+    "imageAlt": "El equipo de Over Project",
+    "body": "Over Project nació del sueño de dos hermanos apasionados por la creatividad y la tecnologia.\n\nSomos un estudio creativo que ayuda a otros negocios a construir y mejorar su presencia digital, desde su identidad visual hasta su página web."
+  },
+  "footer": {
+    "note": ""
+  }
+}
