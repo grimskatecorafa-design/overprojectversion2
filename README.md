@@ -43,6 +43,7 @@ La capa visual vive en archivos aparte y no toca el editor ni el contenido:
 
 - `assets/bw-theme.v2.css` — paleta blanco/negro/grises con acento azul fuerte (#1F3BFF: botones, palabras resaltadas, menú, plan destacado, brillos) sobre `app-LZJXYSQA.css` (misma tipografía: Anton + Space Grotesk). Reemplaza los colores por sección (morado, cian, lima, magenta), pone el logo y la intro en blanco y el video de "Sobre nosotros" en escala de grises.
 - `assets/bw-wave.v2.js` — fondo dinámico: cinta de hilos de partículas (capa trasera y parte de la nube en azul) que ondula y se cruza, con polvo flotante. Se pausa con la pestaña oculta y respeta "reducir movimiento".
-- `assets/app-JGNQMROS-bw.js` es el mismo bundle con un solo cambio: el fondo de estrellas anterior ya no se anima (además se oculta con CSS).
+- `assets/app-JGNQMROS-bw2.js` es el mismo bundle con dos cambios: el fondo de estrellas anterior ya no se anima (además se oculta con CSS) y el video de "Sobre nosotros" es `videos/about-cinematic.mp4` (horizontal).
+- `assets/bw-about.v1.css` — recuadro horizontal (16:9) para ese video, en computadora y celular.
 
 Si cambias estos archivos, súbele la versión al nombre (`.v2`) y actualiza `index.html`: `/assets/` se guarda en caché un año.
