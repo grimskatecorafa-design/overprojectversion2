@@ -51,7 +51,7 @@ const clean = (s) => String(s || '').replace(/\*/g, '').trim();
 
 // ---------- Contexto: solo lo relevante a la conversación ----------
 const TOPICS = {
-  planes: /plan|paquete|reel|contenido|redes|mensual|al mes|b[aá]sico|business|premium|publicidad|instagram|tiktok|manejo/i,
+  planes: /plan|paquete|reel|contenido|redes|mensual|al mes|cada mes|suscrip|cuota|b[aá]sico|business|premium|publicidad|instagram|tiktok|manejo/i,
   web: /p[aá]gina|web|sitio|landing|tienda|e-?commerce|shopify|dominio|hosting|en l[ií]nea|online|vender/i,
   servicios: /video|foto|sesi[oó]n|evento|testimonio|comercial|merch|playera|sudadera|prenda|suelto|extra|grabaci/i,
   proceso: /proceso|c[oó]mo trabaj|tiempo|tarda|entrega|pasos|revisi/i,
@@ -80,6 +80,13 @@ function buildContext(c, text) {
     out.push(`- ${clean(s.name)}${s.aside ? ' (' + clean(s.aside) + ')' : ''}: ${price(s.price)}`));
   ((c.plans && c.plans.addons) || []).forEach((a) =>
     out.push(`- Adicional ${clean(a.name)} (${clean(a.detail)}): ${price(a.price)}`));
+
+  // Mensualidades: se calcula del editor (lo que tenga "al mes" marcado).
+  const all = [].concat(plans, (c.services && c.services.items) || [], (c.plans && c.plans.addons) || []);
+  const recurring = all.filter((x) => x && x.price && x.price.per);
+  out.push(recurring.length
+    ? `PAGOS MENSUALES: lo único que se paga mensualmente es: ${recurring.map((x) => `${clean(x.name)} (${price(x.price)})`).join(', ')}. Todo lo demás (paquetes Básico/Business/Premium, páginas web y servicios sueltos) es pago único.`
+    : 'PAGOS MENSUALES: Over Project no maneja mensualidades; todos los servicios son de pago único.');
 
   if (want.planes || !any) {
     out.push('DETALLE DE PAQUETES DE CONTENIDO (pago único, no son mensualidades ni se renuevan):');
@@ -112,6 +119,7 @@ Reglas:
 - Usa SOLO la información de abajo. Si algo no está (plazos exactos, descuentos, disponibilidad, casos especiales), dilo con honestidad e invita a confirmarlo por WhatsApp.
 - Nunca inventes precios, promociones, tiempos ni servicios. Los precios son en pesos mexicanos; "Desde" significa precio inicial.
 - Los paquetes Básico, Business y Premium son servicios de pago único, NO son mensualidades ni suscripciones; nunca digas "al mes" ni "mensual" de ellos.
+- Si preguntan por mensualidades, pagos mensuales, cuotas o suscripciones, responde con lo que dice la línea "PAGOS MENSUALES" (nombre del servicio y su precio exacto, sin "a partir de" si no dice "Desde"), y aclara que lo demás es pago único.
 - Para recomendar un paquete, pregunta lo mínimo necesario (qué necesita y cuánto contenido) y recomienda uno con su precio.
 - No pidas datos personales (nombre completo, teléfono, correo, dirección). Para cotizar o contratar, invita a escribir por WhatsApp con el botón del chat.
 - Si preguntan algo que no tiene que ver con Over Project, responde brevemente que solo puedes ayudar con los servicios de Over Project.
