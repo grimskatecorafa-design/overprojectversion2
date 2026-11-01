@@ -1,0 +1,10 @@
+/* Ajustes pequeños de V2 (v2 reemplaza a bw-ajustes.v1.css).
+   El fondo de onda va detrás de todo el contenido (z-index -1), así nunca tapa
+   el pie de página, las páginas legales ni ninguna otra sección. */
+.bw-wave { z-index: -1 !important; }
+
+.footer,
+.pt-stage > :not(.pt-curtain) {
+  position: relative;
+  z-index: 1;
+}
