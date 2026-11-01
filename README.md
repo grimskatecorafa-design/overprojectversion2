@@ -46,5 +46,6 @@ La capa visual vive en archivos aparte y no toca el editor ni el contenido:
 - `assets/app-JGNQMROS-bw3.js` es el mismo bundle con dos cambios: el fondo de estrellas anterior ya no se anima (además se oculta con CSS) y el video de "Sobre nosotros" es `videos/about-nosotros.mp4` (horizontal).
 - `assets/bw-about.v1.css` — recuadro horizontal (16:9) para ese video, en computadora y celular.
 - `assets/bw-plans.v1.css` — Planes: 3 mensuales arriba y los 2 planes web abajo, mitad y mitad (como el sitio oficial).
+- `assets/bw-ajustes.v1.css` — ajustes pequeños: el pie de página y las páginas legales quedan encima del fondo de onda.
 
 Si cambias estos archivos, súbele la versión al nombre (`.v2`) y actualiza `index.html`: `/assets/` se guarda en caché un año.
