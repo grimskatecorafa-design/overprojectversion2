@@ -1,0 +1,8 @@
+/* Ajustes pequeños de V2.
+   El fondo de onda (canvas fijo, z-index 0) se dibuja encima de lo que no tiene posición propia.
+   El pie de página y las páginas legales/sueltas quedan por encima del fondo, como <main>. */
+.footer,
+.pt-stage > :not(.pt-curtain) {
+  position: relative;
+  z-index: 1;
+}
