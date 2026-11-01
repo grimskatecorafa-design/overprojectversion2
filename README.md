@@ -49,3 +49,21 @@ La capa visual vive en archivos aparte y no toca el editor ni el contenido:
 - `assets/bw-ajustes.v3.css` — ajustes pequeños: fondo de onda detrás de todo, logo de la portada más pequeño y sin la sección "Pilares" en Servicios.
 
 Si cambias estos archivos, súbele la versión al nombre (`.v2`) y actualiza `index.html`: `/assets/` se guarda en caché un año.
+
+## Asistente de chat (IA gratis + botones guiados)
+
+- `assets/op-chat.v1.js` + `assets/op-chat.v1.css` — botón flotante "¿Dudas? Pregúntame" y panel de chat.
+  - **Botones guiados (sin IA, sin costo):** "¿Qué plan me conviene?", "Ver precios", "Quiero una página web", "Servicios sueltos". Toman planes, servicios y precios del editor (Firebase `content/siteV2`), así que se actualizan solos.
+  - **Preguntas libres:** van a `api/chat`. Máximo 8 preguntas por persona; después pasa a WhatsApp.
+  - **WhatsApp:** abre el número de Contacto (editor) con un resumen de lo que platicó el cliente.
+- `api/chat.js` — función de Vercel. Manda al modelo solo la información relevante (≈800 tokens por pregunta) para rendir el plan gratis.
+  - Motor: **Cloudflare Workers AI** (`@cf/meta/llama-3.1-8b-instruct-fp8-fast`), plan gratis de 10,000 neuronas al día (≈150 conversaciones de 6 preguntas).
+  - Respaldo opcional: **Google Gemini** (plan gratis). Si los dos fallan, el chat manda a WhatsApp sin mostrar error.
+
+Variables en Vercel (Settings → Environment Variables):
+
+| Variable | Valor |
+|---|---|
+| `CF_ACCOUNT_ID` | ID de la cuenta de Cloudflare (Workers AI). Obligatoria. |
+| `CF_API_TOKEN` | Token de Cloudflare con permiso **Workers AI**. Obligatoria. |
+| `GEMINI_API_KEY` | Opcional: clave de Google AI Studio para el respaldo. |
