@@ -127,13 +127,13 @@
       },
       {
         "id": "web-informativa",
-        "name": "Desarrollo de página web",
+        "name": "Desarrollo de pagina informativa",
         "aside": "Informativa",
         "group": "web",
         "icon": "monitor",
         "price": {
           "kind": "from",
-          "amount": 8000
+          "amount": 5999
         },
         "description": "Sitio web profesional, diseño personalizado, optimización y más.",
         "note": "Dominio con costo cubierto por el cliente, membresías"
@@ -146,7 +146,7 @@
         "icon": "cart",
         "price": {
           "kind": "from",
-          "amount": 12000
+          "amount": 8999
         },
         "description": "Catálogo de productos, métodos de pago, envíos, optimización y más.",
         "note": "Dominio con costo cubierto por el cliente, membresías"
