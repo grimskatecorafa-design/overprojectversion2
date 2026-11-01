@@ -1,0 +1,20 @@
+/* "Sobre nosotros" con video horizontal (videos/about-cinematic.mp4, 16:9).
+   El recuadro pasa de vertical a horizontal para que el video se vea completo,
+   en computadora y en celular. */
+.about-media,
+.about-media:has(.about-reel) {
+  aspect-ratio: 16 / 9;
+}
+/* El video trae su propio color: sin el filtro gris del tema. */
+.about-reel video { filter: none; }
+
+/* Computadora: más espacio para el video que para el texto. */
+@media (min-width: 900px) {
+  .about-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+}
+
+/* Celular: el video ocupa todo el ancho, arriba del texto, con esquinas menos redondas. */
+@media (max-width: 899px) {
+  .about-grid { gap: 28px; }
+  .about-media { border-radius: 16px; }
+}
