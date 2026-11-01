@@ -45,5 +45,6 @@ La capa visual vive en archivos aparte y no toca el editor ni el contenido:
 - `assets/bw-wave.v2.js` — fondo dinámico: cinta de hilos de partículas (capa trasera y parte de la nube en azul) que ondula y se cruza, con polvo flotante. Se pausa con la pestaña oculta y respeta "reducir movimiento".
 - `assets/app-JGNQMROS-bw3.js` es el mismo bundle con dos cambios: el fondo de estrellas anterior ya no se anima (además se oculta con CSS) y el video de "Sobre nosotros" es `videos/about-nosotros.mp4` (horizontal).
 - `assets/bw-about.v1.css` — recuadro horizontal (16:9) para ese video, en computadora y celular.
+- `assets/bw-plans.v1.css` — Planes: 3 mensuales arriba y los 2 planes web abajo, mitad y mitad (como el sitio oficial).
 
 Si cambias estos archivos, súbele la versión al nombre (`.v2`) y actualiza `index.html`: `/assets/` se guarda en caché un año.
