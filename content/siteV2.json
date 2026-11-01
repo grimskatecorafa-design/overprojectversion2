@@ -206,8 +206,7 @@
         "name": "Básico",
         "price": {
           "kind": "fixed",
-          "amount": 2000,
-          "per": "mes"
+          "amount": 2000
         },
         "features": [
           "2 reels",
@@ -224,8 +223,7 @@
         "name": "Business",
         "price": {
           "kind": "fixed",
-          "amount": 3500,
-          "per": "mes"
+          "amount": 3500
         },
         "features": [
           "4 reels",
@@ -243,8 +241,7 @@
         "name": "Premium",
         "price": {
           "kind": "fixed",
-          "amount": 5500,
-          "per": "mes"
+          "amount": 5500
         },
         "badge": "Más elegido",
         "features": [
@@ -257,6 +254,42 @@
           "Adaptado para todas las redes",
           "3 revisiones"
         ]
+      },
+      {
+        "id": "plan-hse7t1",
+        "name": "LANDING PAGE/ PAGINA WEB INFORMATIVA",
+        "price": {
+          "kind": "from",
+          "amount": 5999
+        },
+        "features": [
+          "Diseño a tu Medida: Estética minimalista y limpia, 100% alineada con la identidad visual de tu marca.",
+          "Velocidad Optimizada: Tiempos de carga ultrarrápidos para evitar que tus clientes abandonen el sitio.",
+          "Responsive Total: Adaptación fluida y perfecta en smartphones, tablets y computadoras de escritorio.",
+          "Estrategia de Conversión (UX): Botones de llamada a la acción (CTA) ubicados estratégicamente para maximizar ventas.",
+          "Dominio y Hosting: Te ayudamos a configurar tu dominio propio y el alojamiento seguro (SSL).",
+          "Autogestionable: Estructura intuitiva para que puedas actualizar información básica sin depender de programadores."
+        ],
+        "badge": " "
+      },
+      {
+        "id": "plan-3knsmo",
+        "name": "tienda en linea / ecommerce",
+        "price": {
+          "kind": "from",
+          "amount": 8999
+        },
+        "features": [
+          "Catálogo Dinámico: Organización impecable de tus productos con variantes de tallas, colores e imágenes en alta resolución.",
+          "Carrito y Checkout Fluido: Proceso de compra rápido, intuitivo y sin fricciones para evitar carritos abandonados.",
+          "pagos Seguros Integrados: Conexión directa con pasarelas confiables (Stripe, PayPal o tarjetas de crédito/débito).",
+          "Diseño Visual de Alta Gama: Estética minimalista y elegante que transmite exclusividad y confianza en tu marca.",
+          "Panel de Administración: Control total para gestionar tu inventario, stock, pedidos y clientes en tiempo real de forma sencilla.",
+          "Optimización Móvil (Mobile-First): Diseñado para que tus clientes compren cómodamente desde cualquier smartphone.",
+          "Cálculo Automático de Envíos: Integración con tarifas y métodos de envío personalizados para tus entregas.",
+          "Seguridad y Confianza (SSL): Certificados de seguridad activos y políticas claras para proteger los datos de cada comprador."
+        ],
+        "badge": " "
       }
     ],
     "addonsTitle": "Adicionales",
@@ -310,14 +343,6 @@
     "lead": "Sitios reales que diseñamos y programamos. Míralos en movimiento y entra a cada uno.",
     "items": [
       {
-        "id": "cr-over-project",
-        "name": "Over Project",
-        "tag": "Landing page",
-        "description": "Nuestro propio sitio: landing interactiva con catálogo de servicios, cotizador y editor propio.",
-        "video": "videos/hero-over-project.mp4",
-        "url": "https://over-project-over-project.vercel.app"
-      },
-      {
         "id": "cr-aesthetic-madness",
         "name": "Aesthetic Madness",
         "tag": "E-commerce",
@@ -336,7 +361,7 @@
       {
         "id": "cr-portal",
         "name": "Portal Empresarial",
-        "tag": "Herramienta interna",
+        "tag": "sistema empresarial interno",
         "description": "Portal de trabajo para un equipo: informes, gastos y pendientes en un solo lugar.",
         "video": "videos/hero-portal-trabajo.mp4",
         "url": "https://script.google.com/macros/s/AKfycbwWpYU-j0NDEMTGUeLe827XB4RlG6clCm3q-O9378WCvU4vcFvLoDkCikA2i4QMRmMxhg/exec"
@@ -344,10 +369,18 @@
       {
         "id": "cr-yd04rp",
         "name": "Proyecto web en curso | Tienda de suplementos",
-        "tag": "Sitio web",
+        "tag": "E-commerce",
         "description": "Concepto de diseño web para una tienda de suplementos deportivos, enfocado en una estética moderna, navegación intuitiva y una presentación atractiva de productos. Una propuesta que combina identidad visual, funcionalidad y experiencia de usuario para impulsar las ventas en línea.",
         "video": "videos/hero-strongest-supplements.mp4",
         "url": "https://strongest-supplements-v2.vercel.app"
+      },
+      {
+        "id": "cr-2jbgyd",
+        "name": "Proyecto web en curso | servicios de reservas",
+        "tag": "E-commerce",
+        "description": "",
+        "video": "",
+        "url": ""
       }
     ]
   },
@@ -482,7 +515,7 @@
     "kicker": "Hablemos",
     "title": "Cuéntanos tu *proyecto*",
     "lead": "Escribe los detalles y te preparamos una propuesta a la medida.",
-    "phone": "",
+    "phone": "33 2794 3905",
     "phoneLabel": "Llámanos o escríbenos por WhatsApp",
     "email": ""
   },
