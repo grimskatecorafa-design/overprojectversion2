@@ -36,3 +36,13 @@ Para que una versión nueva **no borre lo editado desde la página**:
   de estructura, migra los valores guardados en lugar de empezar de cero.
 - **Conserva** el `<script>` de sincronización en `index.html`, la carpeta `api/` y la carpeta `content/`.
 - No modifiques `content/siteV2.json` a mano: lo escribe el editor.
+
+## Tema blanco y negro + fondo de onda de partículas
+
+La capa visual vive en archivos aparte y no toca el editor ni el contenido:
+
+- `assets/bw-theme.v1.css` — paleta blanco/negro/grises sobre `app-LZJXYSQA.css` (misma tipografía: Anton + Space Grotesk). Reemplaza los colores por sección (morado, cian, lima, magenta), pone el logo y la intro en blanco y el video de "Sobre nosotros" en escala de grises.
+- `assets/bw-wave.v1.js` — fondo dinámico: cinta de hilos de partículas que ondula y se cruza, con polvo flotante. Se pausa con la pestaña oculta y respeta "reducir movimiento".
+- `assets/app-JGNQMROS-bw.js` es el mismo bundle con un solo cambio: el fondo de estrellas anterior ya no se anima (además se oculta con CSS).
+
+Si cambias estos archivos, súbele la versión al nombre (`.v2`) y actualiza `index.html`: `/assets/` se guarda en caché un año.
