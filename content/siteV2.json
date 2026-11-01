@@ -216,7 +216,8 @@
           "Subtítulos y música",
           "Entrega en Google Drive",
           "2 revisiones"
-        ]
+        ],
+        "badge": "PUBLICIDAD"
       },
       {
         "id": "business",
@@ -234,7 +235,8 @@
           "Entrega en Google Drive",
           "Adaptado para todas las redes",
           "2 revisiones"
-        ]
+        ],
+        "badge": "PUBLICIDAD"
       },
       {
         "id": "premium",
@@ -243,7 +245,7 @@
           "kind": "fixed",
           "amount": 5500
         },
-        "badge": "Más elegido",
+        "badge": "PUBLICIDAD (MAS ELEGIDO)",
         "features": [
           "6 reels",
           "20 fotografías editadas",
@@ -270,7 +272,7 @@
           "Dominio y Hosting: Te ayudamos a configurar tu dominio propio y el alojamiento seguro (SSL).",
           "Autogestionable: Estructura intuitiva para que puedas actualizar información básica sin depender de programadores."
         ],
-        "badge": " "
+        "badge": " CREACION DE WEB"
       },
       {
         "id": "plan-3knsmo",
@@ -289,7 +291,7 @@
           "Cálculo Automático de Envíos: Integración con tarifas y métodos de envío personalizados para tus entregas.",
           "Seguridad y Confianza (SSL): Certificados de seguridad activos y políticas claras para proteger los datos de cada comprador."
         ],
-        "badge": " "
+        "badge": " CREACION DE WEB"
       }
     ],
     "addonsTitle": "Adicionales",
