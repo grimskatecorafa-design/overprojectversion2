@@ -43,7 +43,7 @@ La capa visual vive en archivos aparte y no toca el editor ni el contenido:
 
 - `assets/bw-theme.v2.css` — paleta blanco/negro/grises con acento azul fuerte (#1F3BFF: botones, palabras resaltadas, menú, plan destacado, brillos) sobre `app-LZJXYSQA.css` (misma tipografía: Anton + Space Grotesk). Reemplaza los colores por sección (morado, cian, lima, magenta), pone el logo y la intro en blanco y el video de "Sobre nosotros" en escala de grises.
 - `assets/bw-wave.v2.js` — fondo dinámico: cinta de hilos de partículas (capa trasera y parte de la nube en azul) que ondula y se cruza, con polvo flotante. Se pausa con la pestaña oculta y respeta "reducir movimiento".
-- `assets/app-JGNQMROS-bw3.js` es el mismo bundle con dos cambios: el fondo de estrellas anterior ya no se anima (además se oculta con CSS) y el video de "Sobre nosotros" es `videos/about-nosotros.mp4` (horizontal).
+- `assets/app-JGNQMROS-bw4.js` es el mismo bundle con estos cambios: los planes son servicios de pago único (sin "/ mes"; política de reembolsos adaptada); el fondo de estrellas anterior ya no se anima (además se oculta con CSS) y el video de "Sobre nosotros" es `videos/about-nosotros.mp4` (horizontal).
 - `assets/bw-about.v1.css` — recuadro horizontal (16:9) para ese video, en computadora y celular.
 - `assets/bw-plans.v1.css` — Planes: 3 mensuales arriba y los 2 planes web abajo, mitad y mitad (como el sitio oficial).
 - `assets/bw-ajustes.v3.css` — ajustes pequeños: fondo de onda detrás de todo, logo de la portada más pequeño y sin la sección "Pilares" en Servicios.
@@ -52,8 +52,8 @@ Si cambias estos archivos, súbele la versión al nombre (`.v2`) y actualiza `in
 
 ## Asistente de chat (IA gratis + botones guiados)
 
-- `assets/op-chat.v1.js` + `assets/op-chat.v1.css` — botón flotante "¿Dudas? Pregúntame" y panel de chat.
-  - **Botones guiados (sin IA, sin costo):** "¿Qué plan me conviene?", "Ver precios", "Quiero una página web", "Servicios sueltos". Toman planes, servicios y precios del editor (Firebase `content/siteV2`), así que se actualizan solos.
+- `assets/op-chat.v2.js` + `assets/op-chat.v1.css` — botón flotante "¿Dudas? Pregúntame" y panel de chat.
+  - **Botones guiados (sin IA, sin costo):** "¿Qué paquete me conviene?", "Ver precios", "Quiero una página web", "Servicios sueltos". Toman planes, servicios y precios del editor (Firebase `content/siteV2`), así que se actualizan solos.
   - **Preguntas libres:** van a `api/chat`. Máximo 8 preguntas por persona; después pasa a WhatsApp.
   - **WhatsApp:** abre el número de Contacto (editor) con un resumen de lo que platicó el cliente.
 - `api/chat.js` — función de Vercel. Manda al modelo solo la información relevante (≈800 tokens por pregunta) para rendir el plan gratis.
