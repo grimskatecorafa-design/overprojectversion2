@@ -1,0 +1,8 @@
+/* Planes: 3 planes mensuales arriba y los planes web (4.º y 5.º) abajo, cada uno a la mitad.
+   Cuadrícula de 6 columnas: los 3 primeros ocupan 2 columnas y los siguientes 3,
+   así el texto se reparte a lo ancho y no estira las tarjetas. (Igual que en el sitio oficial.) */
+@media (min-width: 960px) {
+  .plans-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .plans-grid > * { grid-column: span 2; }
+  .plans-grid > :nth-child(n + 4) { grid-column: span 3; }
+}
