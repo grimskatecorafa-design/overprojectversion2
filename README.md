@@ -67,3 +67,5 @@ Variables en Vercel (Settings → Environment Variables):
 | `CF_ACCOUNT_ID` | ID de la cuenta de Cloudflare (Workers AI). Obligatoria. |
 | `CF_API_TOKEN` | Token de Cloudflare con permiso **Workers AI**. Obligatoria. |
 | `GEMINI_API_KEY` | Opcional: clave de Google AI Studio para el respaldo. |
+
+Estado: Cloudflare conectado (noviembre 2026).
