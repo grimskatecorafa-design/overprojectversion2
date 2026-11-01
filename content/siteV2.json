@@ -210,7 +210,7 @@
         },
         "features": [
           "2 reels",
-          "10 fotografías editadas",
+          "8 fotografías editadas",
           "1 sesión de grabación (hasta 1 hora)",
           "Edición profesional",
           "Subtítulos y música",
@@ -227,7 +227,7 @@
         },
         "features": [
           "4 reels",
-          "15 fotografías editadas",
+          "14 fotografías editadas",
           "1 sesión de grabación (hasta 3 horas)",
           "Edición profesional",
           "Subtítulos y música",
@@ -246,7 +246,7 @@
         "badge": "Más elegido",
         "features": [
           "6 reels",
-          "25 fotografías editadas",
+          "20 fotografías editadas",
           "2 sesiones de grabación (hasta 3 horas c/u)",
           "Edición profesional",
           "Subtítulos y música",
@@ -379,7 +379,7 @@
         "name": "Proyecto web en curso | servicios de reservas",
         "tag": "E-commerce",
         "description": "",
-        "video": "",
+        "video": "videos/hero-nua.mp4",
         "url": ""
       }
     ]
