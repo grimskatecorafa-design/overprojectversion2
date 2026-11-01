@@ -41,8 +41,8 @@ Para que una versión nueva **no borre lo editado desde la página**:
 
 La capa visual vive en archivos aparte y no toca el editor ni el contenido:
 
-- `assets/bw-theme.v1.css` — paleta blanco/negro/grises sobre `app-LZJXYSQA.css` (misma tipografía: Anton + Space Grotesk). Reemplaza los colores por sección (morado, cian, lima, magenta), pone el logo y la intro en blanco y el video de "Sobre nosotros" en escala de grises.
-- `assets/bw-wave.v1.js` — fondo dinámico: cinta de hilos de partículas que ondula y se cruza, con polvo flotante. Se pausa con la pestaña oculta y respeta "reducir movimiento".
+- `assets/bw-theme.v2.css` — paleta blanco/negro/grises con acento azul fuerte (#1F3BFF: botones, palabras resaltadas, menú, plan destacado, brillos) sobre `app-LZJXYSQA.css` (misma tipografía: Anton + Space Grotesk). Reemplaza los colores por sección (morado, cian, lima, magenta), pone el logo y la intro en blanco y el video de "Sobre nosotros" en escala de grises.
+- `assets/bw-wave.v2.js` — fondo dinámico: cinta de hilos de partículas (capa trasera y parte de la nube en azul) que ondula y se cruza, con polvo flotante. Se pausa con la pestaña oculta y respeta "reducir movimiento".
 - `assets/app-JGNQMROS-bw.js` es el mismo bundle con un solo cambio: el fondo de estrellas anterior ya no se anima (además se oculta con CSS).
 
 Si cambias estos archivos, súbele la versión al nombre (`.v2`) y actualiza `index.html`: `/assets/` se guarda en caché un año.
