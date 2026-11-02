@@ -55,6 +55,7 @@ const TOPICS = {
   web: /p[aá]gina|web|sitio|landing|tienda|e-?commerce|shopify|dominio|hosting|en l[ií]nea|online|vender/i,
   servicios: /video|foto|sesi[oó]n|evento|testimonio|comercial|merch|playera|sudadera|prenda|suelto|extra|grabaci/i,
   proceso: /proceso|c[oó]mo trabaj|tiempo|tarda|entrega|pasos|revisi/i,
+  // (el mapa de la página va siempre en el contexto)
   portafolio: /ejemplo|trabajo|portafolio|cliente|creaci|hecho|proyecto/i
 };
 
@@ -108,6 +109,15 @@ function buildContext(c, text) {
     out.push('PÁGINAS HECHAS POR OVER PROJECT:');
     ((c.creations && c.creations.items) || []).forEach((s) => out.push(`- ${clean(s.name)} (${clean(s.tag)}): ${clean(s.description)}`));
   }
+  out.push(`MAPA DE LA PÁGINA (menú de arriba; en celular, el botón ☰ arriba a la derecha):
+- "Inicio": portada; abajo están "Sobre nosotros" (video y quiénes somos), "Creaciones" (páginas web que ya hicimos, en carrusel) y "Contacto" (sección Hablemos).
+- "Nosotros": lleva a la sección "Sobre nosotros".
+- "Planes": paquetes Básico, Business y Premium; Landing page / página web informativa y Tienda en línea; y abajo "Adicionales" (Sesión de fotos extra, Manejo de redes).
+- "Servicios": servicios sueltos con filtros (Video, Foto, Eventos, Web, Prendas / Merch) y al final "Proceso" (cómo trabajamos).
+- "Portafolio": trabajos y reels de clientes.
+- "Contacto": botones de WhatsApp y Llamar, formulario que se envía por WhatsApp e Instagram.
+- Pie de página (hasta abajo): Aviso de privacidad, Términos y condiciones, Política de cookies, Reembolsos y cancelaciones.
+- Este chat: botón azul abajo a la derecha.`);
   const contact = c.contact || {};
   out.push(`CONTACTO: WhatsApp ${clean(contact.phone) || 'en la sección Contacto'}; Instagram @${(c.brand && c.brand.instagramHandle) || 'overproject_gdl'}. Ubicación: Guadalajara, Jalisco.`);
   return out.join('\n');
@@ -119,6 +129,7 @@ Reglas:
 - Usa SOLO la información de abajo. Si algo no está (plazos exactos, descuentos, disponibilidad, casos especiales), dilo con honestidad e invita a confirmarlo por WhatsApp.
 - Nunca inventes precios, promociones, tiempos ni servicios. Los precios son en pesos mexicanos; "Desde" significa precio inicial.
 - Los paquetes Básico, Business y Premium son servicios de pago único, NO son mensualidades ni suscripciones; nunca digas "al mes" ni "mensual" de ellos.
+- Si preguntan en qué parte de la página está algo, usa el MAPA DE LA PÁGINA: di el nombre exacto de la pestaña del menú (entre comillas, con mayúscula, por ejemplo "Planes") y la sección dentro de ella. Menciona que abajo del mensaje aparece un botón para ir directo.
 - Si preguntan por mensualidades, pagos mensuales, cuotas o suscripciones, responde con lo que dice la línea "PAGOS MENSUALES" (nombre del servicio y su precio exacto, sin "a partir de" si no dice "Desde"), y aclara que lo demás es pago único.
 - Para recomendar un paquete, pregunta lo mínimo necesario (qué necesita y cuánto contenido) y recomienda uno con su precio.
 - No pidas datos personales (nombre completo, teléfono, correo, dirección). Para cotizar o contratar, invita a escribir por WhatsApp con el botón del chat.
