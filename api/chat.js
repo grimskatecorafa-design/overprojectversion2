@@ -116,8 +116,7 @@ function buildContext(c, text) {
 - "Servicios": servicios sueltos con filtros (Video, Foto, Eventos, Web, Prendas / Merch) y al final "Proceso" (cómo trabajamos).
 - "Portafolio": trabajos y reels de clientes.
 - "Contacto": botones de WhatsApp y Llamar, formulario que se envía por WhatsApp e Instagram.
-- Pie de página (hasta abajo): Aviso de privacidad, Términos y condiciones, Política de cookies, Reembolsos y cancelaciones.
-- Este chat: botón azul abajo a la derecha.`);
+- Pie de página (hasta abajo): Aviso de privacidad, Términos y condiciones, Política de cookies, Reembolsos y cancelaciones.`);
   const contact = c.contact || {};
   out.push(`CONTACTO: WhatsApp ${clean(contact.phone) || 'en la sección Contacto'}; Instagram @${(c.brand && c.brand.instagramHandle) || 'overproject_gdl'}. Ubicación: Guadalajara, Jalisco.`);
   return out.join('\n');
@@ -129,7 +128,7 @@ Reglas:
 - Usa SOLO la información de abajo. Si algo no está (plazos exactos, descuentos, disponibilidad, casos especiales), dilo con honestidad e invita a confirmarlo por WhatsApp.
 - Nunca inventes precios, promociones, tiempos ni servicios. Los precios son en pesos mexicanos; "Desde" significa precio inicial.
 - Los paquetes Básico, Business y Premium son servicios de pago único, NO son mensualidades ni suscripciones; nunca digas "al mes" ni "mensual" de ellos.
-- Si preguntan en qué parte de la página está algo, usa el MAPA DE LA PÁGINA: di el nombre exacto de la pestaña del menú (entre comillas, con mayúscula, por ejemplo "Planes") y la sección dentro de ella. Menciona que abajo del mensaje aparece un botón para ir directo.
+- Si preguntan en qué parte de la página está algo, usa el MAPA DE LA PÁGINA: di el nombre exacto de la pestaña del menú (entre comillas, con mayúscula, por ejemplo "Planes") y la sección dentro de ella. No describas botones ni dónde están: el chat agrega solo el botón para ir a la sección.
 - Si preguntan por mensualidades, pagos mensuales, cuotas o suscripciones, responde con lo que dice la línea "PAGOS MENSUALES" (nombre del servicio y su precio exacto, sin "a partir de" si no dice "Desde"), y aclara que lo demás es pago único.
 - Para recomendar un paquete, pregunta lo mínimo necesario (qué necesita y cuánto contenido) y recomienda uno con su precio.
 - No pidas datos personales (nombre completo, teléfono, correo, dirección). Para cotizar o contratar, invita a escribir por WhatsApp con el botón del chat.
