@@ -18,7 +18,7 @@
 
 const FIREBASE_PROJECT = 'over-project-web';
 const CONTENT_DOC = 'content/siteV2';
-const MAX_USER_TURNS = 8;          // preguntas por conversación
+const MAX_USER_TURNS = 25;         // preguntas por conversación (el chat manda solo las últimas)
 const MAX_MSG_CHARS = 600;         // largo máximo de cada mensaje
 const MAX_TOKENS = 260;            // largo máximo de cada respuesta
 const DEFAULT_ORIGINS = [
@@ -172,7 +172,7 @@ function tooMany(ip) {
   list.push(now);
   hits.set(ip, list);
   if (hits.size > 5000) hits.clear();
-  return list.length > 20;
+  return list.length > 40;          // máximo 40 preguntas cada 10 minutos por visitante
 }
 
 function allowedOrigin(req) {
@@ -198,8 +198,9 @@ module.exports = async (req, res) => {
   const raw = Array.isArray(body && body.messages) ? body.messages : [];
   const history = raw
     .filter((m) => m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string' && m.content.trim())
-    .slice(-12)
+    .slice(-12)                       // solo los últimos 12 mensajes: cada pregunta gasta poco
     .map((m) => ({ role: m.role, content: m.content.slice(0, MAX_MSG_CHARS) }));
+  while (history.length && history[0].role === 'assistant') history.shift();   // la plática empieza con el cliente
   if (!history.length || history[history.length - 1].role !== 'user') {
     return res.status(400).json({ ok: false, error: 'Falta la pregunta' });
   }
