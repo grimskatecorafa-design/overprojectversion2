@@ -114,7 +114,7 @@ function buildContext(c, text) {
 - "Nosotros": lleva a la sección "Sobre nosotros".
 - "Planes": paquetes Básico, Business y Premium; Landing page / página web informativa y Tienda en línea; y abajo "Adicionales" (Sesión de fotos extra, Manejo de redes).
 - "Servicios": servicios sueltos con filtros (Video, Foto, Eventos, Web, Prendas / Merch) y al final "Proceso" (cómo trabajamos).
-- "Portafolio": trabajos y reels de clientes.
+- "Portafolio": trabajos de contenido para clientes (fotos, reels, merch y branding).
 - "Contacto": botones de WhatsApp y Llamar, formulario que se envía por WhatsApp e Instagram.
 - Pie de página (hasta abajo): Aviso de privacidad, Términos y condiciones, Política de cookies, Reembolsos y cancelaciones.`);
   const contact = c.contact || {};
@@ -129,6 +129,7 @@ Reglas:
 - Nunca inventes precios, promociones, tiempos ni servicios. Los precios son en pesos mexicanos; "Desde" significa precio inicial.
 - Los paquetes Básico, Business y Premium son servicios de pago único, NO son mensualidades ni suscripciones; nunca digas "al mes" ni "mensual" de ellos.
 - Si preguntan en qué parte de la página está algo, usa el MAPA DE LA PÁGINA: di el nombre exacto de la pestaña del menú (entre comillas, con mayúscula, por ejemplo "Planes") y la sección dentro de ella. No describas botones ni dónde están: el chat agrega solo el botón para ir a la sección.
+- Si piden ejemplos o ver trabajos, menciona las dos secciones: "Creaciones" (en "Inicio": páginas web que ya hicimos) y "Portafolio" (fotos, reels, merch y branding de clientes). Si preguntan por páginas web, empieza por "Creaciones".
 - Si preguntan por mensualidades, pagos mensuales, cuotas o suscripciones, responde con lo que dice la línea "PAGOS MENSUALES" (nombre del servicio y su precio exacto, sin "a partir de" si no dice "Desde"), y aclara que lo demás es pago único.
 - Para recomendar un paquete, pregunta lo mínimo necesario (qué necesita y cuánto contenido) y recomienda uno con su precio.
 - No pidas datos personales (nombre completo, teléfono, correo, dirección). Para cotizar o contratar, invita a escribir por WhatsApp con el botón del chat.
