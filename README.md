@@ -52,9 +52,10 @@ Si cambias estos archivos, súbele la versión al nombre (`.v2`) y actualiza `in
 
 ## Asistente de chat (IA gratis + botones guiados)
 
-- `assets/op-chat.v4.js` + `assets/op-chat.v2.css` — botón flotante "¿Dudas? Pregúntame" y panel de chat.
+- `assets/op-chat.v5.js` + `assets/op-chat.v3.css` — botón flotante "¿Dudas? Pregúntame" y panel de chat.
   - **Botones guiados (sin IA, sin costo):** "¿Qué paquete me conviene?", "Ver precios", "Quiero una página web", "Servicios sueltos". Toman planes, servicios y precios del editor (Firebase `content/siteV2`), así que se actualizan solos.
   - **Preguntas libres:** van a `api/chat`. Hasta 25 preguntas por visita (se mandan solo los últimos 12 mensajes para cuidar el cupo); después pasa a WhatsApp.
+  - **"¿Dónde está…?":** la IA conoce el mapa de la página y el chat muestra botones "Ir a …" a la sección.
   - **WhatsApp:** abre el número de Contacto (editor) con un resumen de lo que platicó el cliente.
 - `api/chat.js` — función de Vercel. Manda al modelo solo la información relevante (≈800 tokens por pregunta) para rendir el plan gratis.
   - Motor: **Cloudflare Workers AI** (`@cf/meta/llama-3.1-8b-instruct-fp8-fast`), plan gratis de 10,000 neuronas al día (≈150 conversaciones de 6 preguntas).
