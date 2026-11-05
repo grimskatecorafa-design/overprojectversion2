@@ -392,6 +392,12 @@
     ],
     "items": [
       {
+        "id": "pf-6z5nn3",
+        "title": "Video Promocional Tienda",
+        "category": "video",
+        "url": "https://www.tiktok.com/@aesthetic_madnessfit/video/7694802627112062226"
+      },
+      {
         "id": "sudaderas",
         "title": "Sudaderas personalizadas",
         "category": "merch",
@@ -468,12 +474,6 @@
         "category": "merch",
         "image": "img/merch.webp",
         "description": "Playera, sudadera, bolsa tote, shaker y termo con el logotipo."
-      },
-      {
-        "id": "pf-6z5nn3",
-        "title": "Video Promocional Tienda",
-        "category": "video",
-        "url": "https://www.tiktok.com/@aesthetic_madnessfit/video/7694802627112062226"
       }
     ]
   },
