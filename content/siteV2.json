@@ -71,13 +71,13 @@
     "items": [
       {
         "id": "merch-personalizado",
-        "name": "Prendas / Merch personalizadas",
+        "name": "Ropa / Merch Personalizada",
         "group": "merch",
         "icon": "shirt",
         "price": {
           "kind": "quote"
         },
-        "description": "Playeras, sudaderas y artículos promocionales con tu diseño y tu marca. Gira el modelo para ver el detalle.",
+        "description": "Lleva la identidad de tu marca a otro nivel con productos personalizados de alta calidad. Creamos hoodies, pants, playeras oversized, ropa deportiva, shorts, bolsas, termos y mucho más, adaptados al estilo y esencia de tu negocio.\n\nIdeales para marcas, empresas, gimnasios, eventos y proyectos que buscan destacar con productos únicos.\n\nPrecio sujeto a cotización, según el tipo de producto, diseño, cantidad y técnica de personalización.",
         "model3d": "models/hoodie.glb",
         "model3dLabel": "Modelo 3D de una sudadera Over Project: arrástralo para girarlo"
       },
