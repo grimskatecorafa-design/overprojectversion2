@@ -99,21 +99,9 @@
         "icon": "camera",
         "price": {
           "kind": "fixed",
-          "amount": 1000
+          "amount": 1499
         },
         "description": "Resalta la esencia de tu marca con fotografías profesionales de producto o modelo. Incluye 8 fotografías editadas en alta calidad, ideales para redes sociales, catálogos y tiendas online."
-      },
-      {
-        "id": "video-comercial",
-        "name": "Video promocional tipo comercial",
-        "aside": "60-90 s",
-        "group": "video",
-        "icon": "clapper",
-        "price": {
-          "kind": "fixed",
-          "amount": 2000
-        },
-        "description": "Pieza con guion, dirección y edición cuidada, lista para campaña."
       },
       {
         "id": "cobertura-evento",
@@ -127,17 +115,6 @@
         "description": "Registro completo de tu evento, en foto y video."
       },
       {
-        "id": "testimonios",
-        "name": "Grabación de testimonios",
-        "group": "video",
-        "icon": "mic",
-        "price": {
-          "kind": "fixed",
-          "amount": 800
-        },
-        "description": "Entrevistas editadas, listas para usar como prueba social."
-      },
-      {
         "id": "web-informativa",
         "name": "Desarrollo de pagina informativa",
         "aside": "Informativa",
@@ -147,7 +124,7 @@
           "kind": "from",
           "amount": 5999
         },
-        "description": "Sitio web profesional, diseño personalizado, optimización y más.",
+        "description": "Lleva tu negocio al mundo digital con una página web moderna, profesional y adaptable a cualquier dispositivo. Diseñamos sitios personalizados que reflejan la identidad de tu marca y presentan tus servicios de manera atractiva y funcional.\n\nEl costo de dominio, hosting y membresías de plataformas externas corre por cuenta del cliente.",
         "note": "Dominio con costo cubierto por el cliente, membresías"
       },
       {
