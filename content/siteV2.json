@@ -70,15 +70,27 @@
     ],
     "items": [
       {
+        "id": "merch-personalizado",
+        "name": "Prendas / Merch personalizadas",
+        "group": "merch",
+        "icon": "shirt",
+        "price": {
+          "kind": "quote"
+        },
+        "description": "Playeras, sudaderas y artículos promocionales con tu diseño y tu marca. Gira el modelo para ver el detalle.",
+        "model3d": "models/hoodie.glb",
+        "model3dLabel": "Modelo 3D de una sudadera Over Project: arrástralo para girarlo"
+      },
+      {
         "id": "video-extra",
-        "name": "Video extra",
+        "name": "Video ",
         "group": "video",
         "icon": "play",
         "price": {
           "kind": "fixed",
-          "amount": 600
+          "amount": 999
         },
-        "description": "Reel o video adicional fuera de tu paquete."
+        "description": "Creamos videos profesionales, dinámicos y atractivos para destacar tu marca en redes sociales. Desde la grabación hasta la edición, transformamos tus ideas en contenido visual de alto impacto."
       },
       {
         "id": "sesion-fotografia",
@@ -150,18 +162,6 @@
         },
         "description": "Catálogo de productos, métodos de pago, envíos, optimización y más.",
         "note": "Dominio con costo cubierto por el cliente, membresías"
-      },
-      {
-        "id": "merch-personalizado",
-        "name": "Prendas / Merch personalizadas",
-        "group": "merch",
-        "icon": "shirt",
-        "price": {
-          "kind": "quote"
-        },
-        "description": "Playeras, sudaderas y artículos promocionales con tu diseño y tu marca. Gira el modelo para ver el detalle.",
-        "model3d": "models/hoodie.glb",
-        "model3dLabel": "Modelo 3D de una sudadera Over Project: arrástralo para girarlo"
       }
     ]
   },
