@@ -43,7 +43,7 @@ La capa visual vive en archivos aparte y no toca el editor ni el contenido:
 
 - `assets/bw-theme.v2.css` — paleta blanco/negro/grises con acento azul fuerte (#1F3BFF: botones, palabras resaltadas, menú, plan destacado, brillos) sobre `app-LZJXYSQA.css` (misma tipografía: Anton + Space Grotesk). Reemplaza los colores por sección (morado, cian, lima, magenta), pone el logo y la intro en blanco y el video de "Sobre nosotros" en escala de grises.
 - `assets/bw-wave.v2.js` — fondo dinámico: cinta de hilos de partículas (capa trasera y parte de la nube en azul) que ondula y se cruza, con polvo flotante. Se pausa con la pestaña oculta y respeta "reducir movimiento".
-- `assets/app-JGNQMROS-bw4.js` es el mismo bundle con estos cambios: los planes son servicios de pago único (sin "/ mes"; política de reembolsos adaptada); el fondo de estrellas anterior ya no se anima (además se oculta con CSS) y el video de "Sobre nosotros" es `videos/about-nosotros.mp4` (horizontal).
+- `assets/app-JGNQMROS-bw5.js` es el mismo bundle con estos cambios: si el teléfono de Contacto trae varios números (por ejemplo "33 27 94 39 05 / 33 45 36 38 32"), cada uno se puede tocar para llamar y tiene su propio par de botones WhatsApp / Llamar (estilos en `assets/bw-contacto.v1.css`); el formulario usa el primer número. Además: los planes son servicios de pago único (sin "/ mes"; política de reembolsos adaptada); el fondo de estrellas anterior ya no se anima (además se oculta con CSS) y el video de "Sobre nosotros" es `videos/about-nosotros.mp4` (horizontal).
 - `assets/bw-about.v1.css` — recuadro horizontal (16:9) para ese video, en computadora y celular.
 - `assets/bw-plans.v1.css` — Planes: 3 mensuales arriba y los 2 planes web abajo, mitad y mitad (como el sitio oficial).
 - `assets/bw-ajustes.v3.css` — ajustes pequeños: fondo de onda detrás de todo, logo de la portada más pequeño y sin la sección "Pilares" en Servicios.
@@ -52,7 +52,7 @@ Si cambias estos archivos, súbele la versión al nombre (`.v2`) y actualiza `in
 
 ## Asistente de chat (IA gratis + botones guiados)
 
-- `assets/op-chat.v6.js` + `assets/op-chat.v3.css` — botón flotante "¿Dudas? Pregúntame" y panel de chat.
+- `assets/op-chat.v7.js` + `assets/op-chat.v3.css` — botón flotante "¿Dudas? Pregúntame" y panel de chat.
   - **Botones guiados (sin IA, sin costo):** "¿Qué paquete me conviene?", "Ver precios", "Quiero una página web", "Servicios sueltos". Toman planes, servicios y precios del editor (Firebase `content/siteV2`), así que se actualizan solos.
   - **Preguntas libres:** van a `api/chat`. Hasta 25 preguntas por visita (se mandan solo los últimos 12 mensajes para cuidar el cupo); después pasa a WhatsApp.
   - **"¿Dónde está…?":** la IA conoce el mapa de la página y el chat muestra botones "Ir a …" a la sección. Si piden ejemplos, ofrece "Creaciones" (páginas web) y "Portafolio".
