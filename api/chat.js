@@ -142,6 +142,8 @@ Usuario: ¿hacen videos?
 Tú: Sí, hacemos videos y reels para redes, con grabación, edición, subtítulos y música. ¿Es para tu marca o para algún evento?
 Usuario: está caro
 Tú: Te entiendo. Si quieres, te ayudo a ver qué paquete se ajusta mejor a lo que necesitas; también podemos platicarlo por WhatsApp y armar algo a tu medida.
+Usuario: ¿eres un bot?
+Tú: Soy el asistente con IA de Over Project 🙂 Si prefieres hablar con alguien del equipo, por WhatsApp te atienden directamente.
 
 Reglas:
 - Usa SOLO la información de abajo. Si algo no está (plazos exactos, descuentos, disponibilidad, casos especiales), dilo con honestidad e invita a confirmarlo por WhatsApp.
@@ -167,7 +169,7 @@ async function askCloudflare(system, history) {
   const r = await fetch(`https://api.cloudflare.com/client/v4/accounts/${acc}/ai/run/${model}`, {
     method: 'POST',
     headers: { Authorization: `Bearer ${tok}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ messages: [{ role: 'system', content: system }, ...history], max_tokens: MAX_TOKENS, temperature: 0.6 })
+    body: JSON.stringify({ messages: [{ role: 'system', content: system }, ...history], max_tokens: MAX_TOKENS, temperature: 0.5 })
   });
   const j = await r.json().catch(() => ({}));
   const text = j && j.result && (j.result.response || (j.result.choices && j.result.choices[0] && j.result.choices[0].message && j.result.choices[0].message.content));
@@ -185,7 +187,7 @@ async function askGemini(system, history) {
     body: JSON.stringify({
       systemInstruction: { parts: [{ text: system }] },
       contents: history.map((m) => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] })),
-      generationConfig: { maxOutputTokens: MAX_TOKENS, temperature: 0.6 }
+      generationConfig: { maxOutputTokens: MAX_TOKENS, temperature: 0.5 }
     })
   });
   const j = await r.json().catch(() => ({}));
@@ -244,6 +246,15 @@ module.exports = async (req, res) => {
     const content = await getContent();
     const recent = history.filter((m) => m.role === 'user').slice(-3).map((m) => m.content).join(' ');
     system = SYSTEM(buildContext(content, recent));
+    // El modelo es chico: para preguntas delicadas se agrega un recordatorio al final, justo antes de contestar.
+    const last = (history.filter((m) => m.role === 'user').slice(-1)[0] || {}).content || '';
+    if (/mensual|al mes|cada mes|por mes|suscrip|cuota|renta|recurrente/i.test(last)) {
+      const all = [].concat((content.plans && content.plans.items) || [], (content.services && content.services.items) || [], (content.plans && content.plans.addons) || []);
+      const rec = all.filter((x) => x && x.price && x.price.per);
+      system += rec.length
+        ? `\n\nRECORDATORIO PARA ESTA RESPUESTA: Sí manejamos un pago mensual: ${rec.map((x) => `${clean(x.name)} (${price(x.price)})`).join(', ')}. Dilo claramente con su precio, y aclara que todo lo demás es pago único.`
+        : '\n\nRECORDATORIO PARA ESTA RESPUESTA: no manejamos mensualidades; todo es pago único.';
+    }
   } catch (e) {
     return res.status(200).json({ ok: false, fallback: true, reason: 'sin contenido' });
   }
