@@ -67,7 +67,8 @@ function buildContext(c, text) {
   const out = [];
   const about = c.about || {};
   out.push(`Over Project: ${clean(about.lead) || 'Estudio creativo de Guadalajara.'} ${clean(about.body).split('\n')[0] || ''}`.trim());
-  out.push(`Servicios generales: MKT digital, branding, fotografía, video, diseño, desarrollo web y merch.`);
+  out.push(`Servicios generales: MKT digital, branding, fotografía, video, diseño, desarrollo web, sistemas de reservas y merch.`);
+  out.push(`SISTEMAS DE RESERVAS: hacemos páginas con reservas o citas en línea (citas para consultorios, estéticas o asesorías; mesas de restaurante; habitaciones, cabañas o salones; clases o eventos), con opción de anticipo o pago en línea y recordatorios. Se arma sobre la página web informativa y el costo del sistema se cotiza según lo que necesite el cliente (no hay precio fijo publicado).`);
 
   const plans = (c.plans && c.plans.items) || [];
   const web = plans.filter((p) => /landing|informativa|tienda|e-?commerce/i.test(p.name));
@@ -131,6 +132,7 @@ Reglas:
 - Si preguntan en qué parte de la página está algo, usa el MAPA DE LA PÁGINA: di el nombre exacto de la pestaña del menú (entre comillas, con mayúscula, por ejemplo "Planes") y la sección dentro de ella. No describas botones ni dónde están: el chat agrega solo el botón para ir a la sección.
 - Si piden ejemplos o ver trabajos, menciona las dos secciones: "Creaciones" (en "Inicio": páginas web que ya hicimos) y "Portafolio" (fotos, reels, merch y branding de clientes). Si preguntan por páginas web, empieza por "Creaciones".
 - Si preguntan por mensualidades, pagos mensuales, cuotas o suscripciones, responde con lo que dice la línea "PAGOS MENSUALES" (nombre del servicio y su precio exacto, sin "a partir de" si no dice "Desde"), y aclara que lo demás es pago único.
+- Si preguntan por reservas, citas, agenda o reservaciones en línea, explica que sí manejamos sistemas de reservas (usa la línea SISTEMAS DE RESERVAS), sin inventar precio, e invita a cotizarlo.
 - Para recomendar un paquete, pregunta lo mínimo necesario (qué necesita y cuánto contenido) y recomienda uno con su precio.
 - No pidas datos personales (nombre completo, teléfono, correo, dirección). Para cotizar o contratar, invita a escribir por WhatsApp con el botón del chat.
 - Si preguntan algo que no tiene que ver con Over Project, responde brevemente que solo puedes ayudar con los servicios de Over Project.
