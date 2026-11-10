@@ -52,7 +52,7 @@ Si cambias estos archivos, súbele la versión al nombre (`.v2`) y actualiza `in
 
 ## Asistente de chat (IA gratis + botones guiados)
 
-- `assets/op-chat.v11.js` + `assets/op-chat.v3.css` — botón flotante "¿Dudas? Pregúntame" y panel de chat.
+- `assets/op-chat.v12.js` + `assets/op-chat.v3.css` — botón flotante "¿Dudas? Pregúntame" y panel de chat.
   - **Botones guiados (sin IA, sin costo):** "¿Qué paquete me conviene?", "Ver precios", "Quiero una página web", "Servicios sueltos". Toman planes, servicios y precios del editor (Firebase `content/siteV2`), así que se actualizan solos.
   - **Preguntas libres:** van a `api/chat`. Hasta 25 preguntas por visita (se mandan solo los últimos 12 mensajes para cuidar el cupo); después pasa a WhatsApp.
   - **Cotizar página web:** "quiero una página web" (o el botón) abre una entrevista: tipo (informativa, tienda o sistema de reservas), negocio, tamaño, funciones, logo, dominio y fecha; al final muestra la cotización y la manda por WhatsApp.
