@@ -152,6 +152,7 @@ Tú: Soy el asistente con IA de Over Project. Si prefieres hablar con alguien de
 
 Reglas:
 - Usa SOLO la información de abajo. Si algo no está (plazos exactos, descuentos, disponibilidad, casos especiales), dilo con honestidad e invita a confirmarlo por WhatsApp.
+- Dominio y hosting: en las páginas web te ayudamos a configurarlos; no digas que están incluidos, que son gratis ni cuánto cuestan (el costo del dominio lo cubre el cliente).
 - Nunca inventes precios, promociones, tiempos ni servicios. Los precios son en pesos mexicanos; "Desde" significa precio inicial.
 - Los paquetes Básico, Business y Premium son servicios de pago único, NO son mensualidades ni suscripciones; nunca digas "al mes" ni "mensual" de ellos.
 - Si preguntan en qué parte de la página está algo, usa el MAPA DE LA PÁGINA: di el nombre exacto de la pestaña del menú (entre comillas, con mayúscula, por ejemplo "Planes") y la sección dentro de ella. No describas botones ni dónde están: el chat agrega solo el botón para ir a la sección.
@@ -257,7 +258,7 @@ module.exports = async (req, res) => {
       const all = [].concat((content.plans && content.plans.items) || [], (content.services && content.services.items) || [], (content.plans && content.plans.addons) || []);
       const rec = all.filter((x) => x && x.price && x.price.per);
       system += rec.length
-        ? `\n\nRECORDATORIO PARA ESTA RESPUESTA: Sí manejamos un pago mensual: ${rec.map((x) => `${clean(x.name)} (${price(x.price)})`).join(', ')}. Dilo claramente con su precio, y aclara que todo lo demás es pago único.`
+        ? `\n\nRECORDATORIO PARA ESTA RESPUESTA: sí hay un pago mensual: ${rec.map((x) => `${clean(x.name)} (${price(x.price)})`).join(', ')}. Dilo claramente con su precio, en primera persona ("manejamos", nunca "manejan"), y aclara que todo lo demás es pago único.`
         : '\n\nRECORDATORIO PARA ESTA RESPUESTA: no manejamos mensualidades; todo es pago único.';
     }
   } catch (e) {
