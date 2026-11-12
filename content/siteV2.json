@@ -239,7 +239,7 @@
         "name": "LANDING PAGE/ PAGINA WEB INFORMATIVA",
         "price": {
           "kind": "from",
-          "amount": 5999
+          "amount": 4999
         },
         "features": [
           "Diseño a tu Medida: Estética minimalista y limpia, 100% alineada con la identidad visual de tu marca.",
@@ -257,7 +257,7 @@
         "name": "tienda en linea / ecommerce",
         "price": {
           "kind": "from",
-          "amount": 8999
+          "amount": 6999
         },
         "features": [
           "Catálogo Dinámico: Organización impecable de tus productos con variantes de tallas, colores e imágenes en alta resolución.",
