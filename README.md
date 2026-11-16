@@ -72,3 +72,7 @@ Variables en Vercel (Settings → Environment Variables):
 | `GEMINI_API_KEY` | Opcional: clave de Google AI Studio para el respaldo. |
 
 Estado: Cloudflare conectado (noviembre 2026).
+
+## Íconos para Google
+- `favicon.ico`, `favicon-96x96.png`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png` y `site.webmanifest` van en la raíz. Google solo muestra favicons **cuadrados** (múltiplos de 48 px); el logo rectangular `img/logo.png` no sirve como favicon.
+- `index.html` tiene además las etiquetas Open Graph y los datos estructurados de la organización (logo para Google).
